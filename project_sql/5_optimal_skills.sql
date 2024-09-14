@@ -41,7 +41,7 @@ average_salary AS (
 )
 
 SELECT
-  skills_demand.skills,
+  DISTINCT(skills_demand.skills),
   skills_demand.demand_count,
   ROUND(average_salary.avg_salary, 2) AS avg_salary --ROUND to 2 decimals 
 FROM
